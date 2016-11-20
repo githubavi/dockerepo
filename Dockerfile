@@ -22,7 +22,7 @@ RUN \
 # Add files.
 ADD README.md README.md
 ADD HelloWorld.cs HelloWorld.cs
-#ADD root/.bashrc /root/.bashrc
+ADD .bashrc .bashrc
 #ADD root/.gitconfig /root/.gitconfig
 #ADD root/.scripts /root/.scripts
 
