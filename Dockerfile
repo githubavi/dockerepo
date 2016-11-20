@@ -4,7 +4,7 @@
 # https://github.com/githubavi/dockerepo
 #
 
-echo "This is cool as I am doing my first autobuild docker image file"
+RUN echo "This is cool as I am doing my first autobuild docker image file"
 
 # Pull base image.
 FROM ubuntu:16.04
