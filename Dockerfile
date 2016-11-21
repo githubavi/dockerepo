@@ -29,8 +29,8 @@ RUN apt-get update
 
 # Install .NET Core Runtime
 ENV DOTNET_VERSION 1.1.0
-#ENV DOTNET_DOWNLOAD_URL http://download.microsoft.com/download/A/F/6/AF610E6A-1D2D-47D8-80B8-F178951A0C72/Binaries/dotnet-ubuntu.16.04-x64.1.1.0.tar.gz
-ENV DOTNET_DOWNLOAD_URL https://dotnetcli.blob.core.windows.net/dotnet/release/1.1.0/Binaries/$DOTNET_VERSION/dotnet-ubuntu.16.04-x64.$DOTNET_VERSION.tar.gz
+ENV DOTNET_DOWNLOAD_URL http://download.microsoft.com/download/A/F/6/AF610E6A-1D2D-47D8-80B8-F178951A0C72/Binaries/dotnet-ubuntu.16.04-x64.1.1.0.tar.gz
+#ENV DOTNET_DOWNLOAD_URL https://dotnetcli.blob.core.windows.net/dotnet/release/1.1.0/Binaries/$DOTNET_VERSION/dotnet-ubuntu.16.04-x64.$DOTNET_VERSION.tar.gz
 
 RUN curl -SL $DOTNET_DOWNLOAD_URL --output dotnet.tar.gz \
     && mkdir -p /usr/share/dotnet \
