@@ -21,10 +21,22 @@ RUN \
   
 RUN apt-get update 
 RUN apt-get install -y apt-transport-https
-RUN sh -c 'echo "deb [arch=amd64] https://apt-mo.trafficmanager.net/repos/dotnet-release/ xenial main" > /etc/apt/sources.list.d/dotnetdev.list'
-RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 417A0893
-RUN apt-get update
 
+# Install .NET CLI dependencies
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends \
+        libc6 \
+        libcurl3 \
+        libgcc1 \
+        libgssapi-krb5-2 \
+        libicu52 \
+        liblttng-ust0 \
+        libssl1.0.0 \
+        libstdc++6 \
+        libunwind8 \
+        libuuid1 \
+        zlib1g \
+    && rm -rf /var/lib/apt/lists/*
 
 
 # Install .NET Core Runtime
